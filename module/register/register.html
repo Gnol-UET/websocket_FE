@@ -1,0 +1,18 @@
+<div>
+    <form name="formDangKy">
+        Username <input type="text" name="ten" ng-model="registeringUser.username" required>
+        <span ng-show="formDangKy.ten.$error.required">Username không được trống</span>
+        <br>
+        Password <input type="password" name="password" ng-model="registeringUser.password" required>
+        <span ng-show="formDangKy.password.$error.required">Password không được trống</span>
+        <br>
+        Repeat password <input type="password" name="passwordRepeat" ng-model="registeringUser.passwordRepeat" required>
+        <span ng-show="formDangKy.passwordRepeat.$error.required">Password repeat không được trống</span>
+        <br>
+        <span ng-show="registeringUser.passwordRepeat != registeringUser.password" style="color: orangered">Password không trùng nhau</span>
+        <br>
+        <button ng-click="register()" ng-disabled="formDangKy.$invalid || dataLoading || registeringUser.passwordRepeat != registeringUser.password" class="btn btn-danger" ng-click="submit()">Đăng ký</button>
+    </form>
+
+
+</div>

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.2",
+    "bootstrap": "^3.3.7",
+    "sockjs-client": "^1.1.2",
+    "stompjs": "^2.3.3"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server -p 82 -c-1"
+  }
+}

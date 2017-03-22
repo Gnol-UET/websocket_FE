@@ -1,0 +1,32 @@
+<div style=" float: right">{{hello}}</div>
+<div>
+    <button  ng-click="logOut()">Logout</button>
+
+    <div class="header">
+
+        <form id="todo-form" ng-submit="addTodo()">
+            <input type="text" id="new-todo" placeholder="Enter something " ng-model="newtodo" autofocus>
+        </form>
+    </div>
+    <div class="container-fluid">
+        <input class="checkbox-completed" type="checkbox" ng-model="allChecked" ng-change="markAllchecked()">
+        <label>Mark all as completed</label>
+        <ul class="list-group">
+            <li ng-repeat="todo in listTodo    | filter: filterCompleted  track by $index" class="list-group-item">
+                {{todo.title}}
+                {{todo.completed}}
+                <input type="checkbox" ng-model="todo.completed" ng-change="markATask(todo)"/>
+                <input type="text" class="name" ng-model="todo.name" ng-readonly="readonly"
+                       ng-class="{deleted: todo.completed}"
+                       ng-dblclick="editTodo()" ng-blur="doneEditTodo()"/>
+                <button class="btn btn-danger" ng-click="removeTodo($index)">Delete</button>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <label> <strong>Have {{counts}} items </strong></label><br>
+        <input type="button" class="btn btn-info" ng-click="status='ALL'" value="All">
+        <input type="button" class="btn btn-info" ng-click="status='COMPLETED'" value="Completed">
+        <input type="button" class="btn btn-info" ng-click="status='ACTIVE'" value="Active">
+    </div>
+</div>

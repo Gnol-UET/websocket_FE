@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoList</title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="node_modules/stompjs/lib/stomp.js"></script>
+    <script src="module/sockjs.min.js"></script>
+</head>
+<body ng-app="app">
+<div class="container">
+    <a ui-sref="websock">Websock</a>
+    <br>
+    <a ui-sref="todo">Todo</a>
+    <br>
+    <a ui-sref="register">Register</a>
+    <div ui-view></div>
+
+
+</div>
+
+<!--Module-->
+<script src="module/app.js"></script>
+<script src="module/todo/todo.js"></script>
+<script src="module/login/login.js"></script>
+<script src="module/register/register.js"></script>
+<script src="module/websock/websock.js"></script>
+
+
+<!--Controller-->
+<script src="module/todo/todoCtrl.js"></script>
+<script src="module/login/loginCtrl.js"></script>
+<script src="module/register/registerCtrl.js"></script>
+<script src="module/websock/websockCtrl.js"></script>
+<!--Service-->
+<script src="service/authenService.js"></script>
+
+</body>
+</html>

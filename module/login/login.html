@@ -1,0 +1,19 @@
+<div>
+
+    <span>Username: admin <br>Pw: 1</span>
+    <form name="formNhap">
+        Username <input type="text" name="ten" ng-model="user.username" required>
+        <span ng-show="formNhap.ten.$error.required">Username không được trống</span>
+        </br>
+
+        Password <input type="password" name="pw" ng-model="user.password" required>
+        <span ng-show="formNhap.pw.$error.required">Password không được trống</span>
+        </br>
+        <button  ng-disabled="formNhap.$invalid || dataLoading" class="btn btn-danger" ng-click="submit()">Login</button>
+    </form>
+    <!--<input type="number" ng-model="so1">-->
+    <!--<input type="number" ng-model="so2">-->
+    <!--<button ng-click="plusMe()">Cong 2 so</button>-->
+    <!--{{result}}-->
+
+</div>
