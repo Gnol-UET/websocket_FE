@@ -56,7 +56,7 @@ Mỗi khi một client khác gửi tin nhắn trên kênh này sẽ được qu�
 #
 #
 
-Send
+> Send
 ```
 $scope.sendName = function () {
             $scope.stompClient.send("/hello", {}, JSON.stringify({'name': $scope.hello}));
